@@ -1,13 +1,14 @@
 import React from 'react'
+import './index.css'
 
-const api ={
-  key: "e4d33e4eba8f5159627ebf500dc4b54e",
-  base: "https://api.openweathermap.org/data/2.5"
-}
+// const api ={
+//   key: "e4d33e4eba8f5159627ebf500dc4b54e",
+//   base: "https://api.openweathermap.org/data/2.5"
+// }
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <main>
       <div className="search-box">
         <input
