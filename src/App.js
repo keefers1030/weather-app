@@ -30,7 +30,7 @@ const dateBuilder = (d) => {
   let date = d.getDate()
   let year = d.getFullYear()
 
-  return `${day}, ${month} ${date}, ${year}`
+  return `${day} ${month} ${date}, ${year}`
 }
 
   return (
