@@ -30,7 +30,7 @@ const dateBuilder = (d) => {
   let date = d.getDate()
   let year = d.getFullYear()
 
-  return `${day} ${month} ${date}, ${year}`
+  return `${day}, ${month} ${date}, ${year}`
 }
 
   return (
@@ -46,7 +46,7 @@ const dateBuilder = (d) => {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search..."
+          placeholder="Search by city name..."
           onChange={event => setQuery(event.target.value)}
           value={query}
           onKeyPress={search}
@@ -59,12 +59,20 @@ const dateBuilder = (d) => {
           <div className="location">{weather.name}, {weather.sys.country}</div>
           <div className="date">{dateBuilder(new Date())}</div>
         </div>
-
+ 
       <div className="weather-box">
           <div className="temp">
             {Math.round(weather.main.temp)}°F
           </div>
+                      <div className="weather-box">
+          <img
+                src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                alt="weather status icon"
+                className="weather-icon"
+              />
+              </div>
           <div className="weather">{weather.weather[0].main}</div>
+
         </div>
       </div>
       ) : ('')}
