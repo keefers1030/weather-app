@@ -8,19 +8,25 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-.app {
-  background-image: url("./assets/cold.jpg");
+.app.cool {
+  background-image: url("./assets/cool.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
 }
 
 .app.warm {
-  background-image: url("./assets/sunny.jpg")
+  background-image: url("./assets/sunny.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
 
-.app.sunny {
-  
+.app{
+  background-image: url("./assets/neutral.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
 
 main {
@@ -30,16 +36,16 @@ main {
 
 .search-box {
   width: 100%;
-  margin: 0 0 75px;
   align-items:center;
   display: flex;
   justify-content: center;
 }
 
 .search-box .search-bar {
-  width: 30%;
+  width: 40%;
   text-align: center;
   padding: 15px;
+  margin: 30px;
   left: 50%;
     font-family:'Gill Sans',
     'Gill Sans MT',
@@ -50,7 +56,7 @@ main {
   appearance: none;
   border: none;
   outline: none;
-  border-radius: 0px 0px 16px 16px;
+  border-radius: 16px 16px;
   background-color: rgba(255, 255, 255, 0.5);
 
   box-shadow: rgba(88, 41, 41, 0.2);
@@ -87,7 +93,19 @@ main {
   text-align: center;
 }
 
-.weather-box .temp {
+.weather-box1 {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+/* .weather-box {
   position: relative;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.2);
@@ -103,6 +121,23 @@ main {
   text-shadow:3px 6px rgba(50, 50, 70, 0.5);
   text-align: center;
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+} */
+
+.temp {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(243, 147, 243, 0.247);
+  margin: 30px auto;
+  border-radius: 5px 20px 5px;
+
+  padding: 15px;
+
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
 }
 
 .weather-box .weather {
@@ -110,4 +145,9 @@ main {
   font-size: 48px;
   font-weight: 700;
   text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.degree {
+font-size: 40px;
+margin-bottom: -25px;
 }

@@ -36,9 +36,9 @@ const dateBuilder = (d) => {
   return (
     <div className={
       (typeof weather.main != "undefined") 
-        ? ((weather.main.temp > 50) 
+        ? ((weather.main.temp > 55) 
           ? 'app warm' 
-          : 'app')
+          : 'app cool')
         : 'app'}>
       <main>
 
@@ -46,13 +46,13 @@ const dateBuilder = (d) => {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search by city name..."
+          placeholder="Enter city"
           onChange={event => setQuery(event.target.value)}
           value={query}
           onKeyPress={search}
           />
       </div>
-
+<div className="weather-box1">
       {(typeof weather.main != "undefined") ? (
       <div>
         <div className="location-box">
@@ -62,9 +62,9 @@ const dateBuilder = (d) => {
  
       <div className="weather-box">
           <div className="temp">
-            {Math.round(weather.main.temp)}°F
+            {Math.round(weather.main.temp)}<span class="degree">°F</span>
           </div>
-                      <div className="weather-box">
+          <div className="weather-box">
           <img
                 src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                 alt="weather status icon"
@@ -76,6 +76,7 @@ const dateBuilder = (d) => {
         </div>
       </div>
       ) : ('')}
+      </div>
       </main>
     </div>
   );
