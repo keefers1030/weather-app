@@ -9,21 +9,21 @@ body{
 }
 
 .app.cool {
-  background-image: url("./assets/cool.png");
+  background-image: url("./assets/cool.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
 }
 
 .app.warm {
-  background-image: url("./assets/cool.png");
+  background-image: url("./assets/warm.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
 }
 
 .app{
-  background-image: url("./assets/cool.png");
+  background-image: url("./assets/cool.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
